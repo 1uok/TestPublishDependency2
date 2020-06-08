@@ -9,4 +9,8 @@ public class Util {
 
         Toast.makeText(context,str,Toast.LENGTH_SHORT).show();
     }
+
+    public static void testUpdateCode(){
+
+    }
 }
