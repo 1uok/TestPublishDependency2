@@ -24,6 +24,12 @@ android {
         }
     }
 
+    repositories{
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
 }
 
 dependencies {
@@ -34,6 +40,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    api fileTree(include: ['ipps-framework-release.aar','ipps-base-release.aar'],dir: 'libs')
-
+//    api fileTree(include: ['ipps-framework-release.aar','ipps-base-release.aar'],dir: 'libs')
+    implementation(name: 'ipps-framework-release', ext: 'aar')
+    implementation(name: 'ipps-base-release', ext: 'aar')
 }
